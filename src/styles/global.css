@@ -1,0 +1,36 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'IBM Plex Sans';
+    font-size: 16px;
+    background-color: #fbfbfb;
+}
+
+h1, h2, h3 {
+    font-family: 'Inter';
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 1.0;
+    letter-spacing: -3px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.04), 
+        0 2px 2px rgba(0,0,0,0.04), 
+        0 4px 4px rgba(0,0,0,0.04), 
+        0 8px 8px rgba(0,0,0,0.04),
+        0 16px 16px rgba(0,0,0,0.04);
+}
+
+p {
+    line-height: 1.5;
+}
+
+body * {
+    box-sizing: border-box;
+}
