@@ -1,6 +1,6 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PropsWithChildren } from 'react';
+import { ComponentProps, HTMLProps, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
 const MarginLeft = styled.span`
@@ -29,7 +29,7 @@ const StyledButton = styled.a`
 
 type ButtonProps = PropsWithChildren<{
     icon?: IconDefinition;
-}>;
+}> & ComponentProps<typeof StyledButton>;
 
 function Button({ children, icon, ...props }: ButtonProps) {
     return (
