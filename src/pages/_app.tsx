@@ -6,12 +6,14 @@ import 'styles/global.css';
 import 'fontsource-ibm-plex-sans/latin-400.css';
 import 'fontsource-ibm-plex-sans/latin-600.css';
 import 'fontsource-inter/latin-700.css';
+import Footer from 'components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
         <>
             <Menu />
             <Component {...pageProps} />
+            <Footer />
         </>
   );
 }

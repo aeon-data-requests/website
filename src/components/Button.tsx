@@ -15,6 +15,8 @@ const StyledButton = styled.a`
     font-weight: 600;
     border-radius: 8px;
     padding: 16px 24px;
+    margin: 16px 0;
+    border: 0;
     transition: 0.2s ease background-color;
     box-shadow: 0 1px 1px rgba(0,0,255,0.08), 
         0 2px 2px rgba(0,0,255,0.08), 
@@ -24,6 +26,7 @@ const StyledButton = styled.a`
 
     &:hover {
         background-color: #0000dd;
+        color: white;
     }
 `;
 

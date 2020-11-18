@@ -5,6 +5,8 @@ import Button from 'components/Button';
 import { faDownload } from 'assets/faDownload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMouseAlt } from 'assets/faMouseAlt';
+import Container, { TwoPanel } from 'components/Container';
+import Rights from 'components/Landing/Rights';
 
 const ImageContainer = styled.div`
     position: relative;
@@ -101,15 +103,19 @@ const Description = styled.div`
         font-size: 20px;
     }
 
+    h1 {
+        text-shadow: 0 1px 1px rgba(0,0,0,0.04), 
+            0 2px 2px rgba(0,0,0,0.04), 
+            0 4px 4px rgba(0,0,0,0.04), 
+            0 8px 8px rgba(0,0,0,0.04),
+            0 16px 16px rgba(0,0,0,0.04);
+    }
+
     @media(max-width: 800px) {
         padding-top: calc(100px + 15vw + 15vh);
         padding-left: 16px;
         margin: 0 auto;
         hyphens: auto;
-
-        h1 {
-            font-size: 48px;
-        }
     }
 `;
 
@@ -137,9 +143,46 @@ export default function Home() {
                     </MoreInfo>
                 </LandingContainer>
             </ImageContainer>
-            <div style={{ height: '500vh' }}>
-                Heaps of content
-            </div>
+            <Container>
+                <TwoPanel>
+                    <div>
+                        <h1>By the power of the GDPR!</h1>
+                        <p>As a European citizen, you have the right to get access to your data from any organisation that is processing it. Aeon makes exercising this right (and a couple more) easy and accessible.</p>
+                    </div>
+                    <div>
+                        <Rights />
+                    </div>
+                </TwoPanel>
+                <TwoPanel inverse>
+                    <div>
+                        <h1>Gather your data automatically</h1>
+                        <p>Aeon automatically retrieves your personal data from a few well-known sources. Just add your account to get started.</p>
+                        <p>A particular source you're looking for not available? Use the built-in auto-emailer to send off your request.</p>
+                    </div>
+                    <div>
+                        <h1>Image!</h1>
+                    </div>
+                </TwoPanel>
+                <TwoPanel>
+                    <div>
+                        <h1>Scanning...<br />Analyzing...</h1>
+                        <p>Aeon offers a convenient overview of your personal data, sorted by type, source and account. Get a quick look at what's happening with your personal information.</p>
+                    </div>
+                    <div>
+                        <h1>Image!</h1>
+                    </div>
+                </TwoPanel>
+                <TwoPanel inverse>
+                    <div>
+                        <h1>Live and let live, search &amp; destroy</h1>
+                        <p>When you have obtained your data, it is up to you what to do with it. Either you let the data as-is, or you remove and modify some of it.</p>
+                        <p>Aeon includes the auto-emailer, which can automatically generate emails that legally compel a particular source to modify or delete data.</p>
+                    </div>
+                    <div>
+                        <h1>Image!</h1>
+                    </div>
+                </TwoPanel>
+            </Container>
         </>
     );
 }

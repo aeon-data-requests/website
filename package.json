@@ -9,9 +9,11 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/react-fontawesome": "^0.1.12",
+    "@types/lodash": "^4.14.165",
     "@zeit/next-css": "^1.0.1",
     "fontsource-ibm-plex-sans": "^3.0.9",
     "fontsource-inter": "^3.0.5",
+    "lodash": "^4.17.20",
     "next": "latest",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

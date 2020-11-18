@@ -16,6 +16,10 @@ const Container = styled(BareContainer)`
     display: flex;
     align-items: center;
     height: 100px;
+
+    a {
+        border-bottom: 0;
+    }
 `;
 
 const Right = styled.div`
