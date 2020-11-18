@@ -17,6 +17,7 @@
     "next": "latest",
     "next-transpile-modules": "^4.1.0",
     "react": "^16.13.0",
+    "react-carbonbadge": "github:leinelissen/react-carbonbadge",
     "react-dom": "^16.13.0",
     "react-github-btn": "^1.2.0",
     "react-spring": "^8.0.27",
