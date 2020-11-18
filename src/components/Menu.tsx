@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import BareContainer from './Container';
 import { animated, useTransition } from 'react-spring';
+import GitHubButton from 'react-github-btn';
 
 const MenuContainer = styled.nav`
     position: fixed;
@@ -24,6 +25,8 @@ const Container = styled(BareContainer)`
 
 const Right = styled.div`
     margin-left: auto;
+    display: flex;
+    align-items: center;
     
     a, button {
         display: inline-block;
@@ -41,6 +44,10 @@ const Right = styled.div`
         &:hover {
             border-bottom: 1px solid black;
         }
+    }
+
+    & > span {
+        margin-left: 25px;
     }
 
     &.mobile {
@@ -126,10 +133,11 @@ export default function Menu() {
         <MenuContainer>
             <Container>
                 <Link href="/">
-                    <a><Image src="/logo.svg" /></a>
+                    <a><Image src="/logo.svg" alt="Aeon Logo" /></a>
                 </Link>
                 <Right className="desktop">
                     <Links />
+                    <GitHubButton href="https://github.com/leinelissen/aeon" data-icon="octicon-star" data-size="large" aria-label="Star leinelissen/aeon on GitHub">Star</GitHubButton>
                 </Right>
                 <Right className="mobile">
                     <button onClick={handleClick}>Menu</button>

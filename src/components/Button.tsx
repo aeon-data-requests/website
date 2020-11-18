@@ -1,6 +1,6 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ComponentProps, HTMLProps, PropsWithChildren } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
 const MarginLeft = styled.span`

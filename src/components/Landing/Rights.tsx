@@ -1,6 +1,12 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from 'assets/faDownload';
+import { faBriefcase } from 'assets/faBriefcase';
+import { faComment } from 'assets/faComment';
+import { faDoorOpen } from 'assets/faDoorOpen';
+import { faEdit } from 'assets/faEdit';
+import { faHandPaper } from 'assets/faHandPaper';
+import { faLock } from 'assets/faLock';
+import { faTrash } from 'assets/faTrash';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -14,14 +20,17 @@ const Container = styled.div`
 const SingleRightContainer = styled.div`
     text-align: center;
     margin: 4px 0;
-    transform: rotateY(-10deg) scale(0.85);
+    transform: rotateY(-5deg) scale(0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     p {
         margin-bottom: 6px;
     }
 
     span {
-        opacity: 0.5;
+        opacity: 0.7;
     }
 `;
 
@@ -59,44 +68,39 @@ function Rights() {
     return (
         <Container>
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
+                icon={faDoorOpen}
+                right="Right to Access"
                 article={15}
             />
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
+                icon={faEdit}
+                right="Right to Rectification"
+                article={16}
             />
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
+                icon={faTrash}
+                right="Right to Erasure"
+                article={17}
             />
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
+                icon={faLock}
+                right="Right to Restriction"
+                article={18}
             />
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
+                icon={faComment}
+                right="Right to Notification"
+                article={19}
             />
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
+                icon={faBriefcase}
+                right="Right to Portability"
+                article={20}
             />
             <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
-            />
-            <SingleRight
-                icon={faDownload}
-                right="Right to download"
-                article={15}
+                icon={faHandPaper}
+                right="Right to Object"
+                article={21}
             />
         </Container>      
     );

@@ -1,4 +1,3 @@
-import Button from 'components/Button';
 import Container from 'components/Container';
 import Main from 'components/Main';
 import OsSelector from 'components/OsSelector';

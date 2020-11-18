@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from 'components/Button';
 import { faDownload } from 'assets/faDownload';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMouseAlt } from 'assets/faMouseAlt';
 import Container, { TwoPanel } from 'components/Container';
 import Rights from 'components/Landing/Rights';
@@ -119,6 +119,21 @@ const Description = styled.div`
     }
 `;
 
+const ScreenContainer = styled.div<{ inverse?: boolean }>`
+    perspective: 400px;
+    position: relative;
+
+    & > div {
+        transform: rotateY(${props => props.inverse ? 3 : -3}deg);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.06), 
+            0 2px 2px rgba(0,0,0,0.06), 
+            0 4px 4px rgba(0,0,0,0.06), 
+            0 8px 8px rgba(0,0,0,0.06),
+            0 16px 16px rgba(0,0,0,0.06);
+        border-radius: 8px;
+    }
+`;
+
 export default function Home() {
     return (
         <>
@@ -128,6 +143,7 @@ export default function Home() {
                     width={1920}
                     height={1080} 
                     quality={95}
+                    alt="Swirly swirls originating from poorly drawn vault"
                 />
                 <LandingContainer>
                     <Description>
@@ -159,18 +175,28 @@ export default function Home() {
                         <p>Aeon automatically retrieves your personal data from a few well-known sources. Just add your account to get started.</p>
                         <p>A particular source you're looking for not available? Use the built-in auto-emailer to send off your request.</p>
                     </div>
-                    <div>
-                        <h1>Image!</h1>
-                    </div>
+                    <ScreenContainer inverse>
+                        <Image 
+                            className="screen"
+                            src="/accounts.png"
+                            width={556}
+                            height={456}
+                        />
+                    </ScreenContainer>
                 </TwoPanel>
                 <TwoPanel>
                     <div>
                         <h1>Scanning...<br />Analyzing...</h1>
                         <p>Aeon offers a convenient overview of your personal data, sorted by type, source and account. Get a quick look at what's happening with your personal information.</p>
                     </div>
-                    <div>
-                        <h1>Image!</h1>
-                    </div>
+                    <ScreenContainer>
+                        <Image 
+                            className="screen"
+                            src="/timeline.png"
+                            width={556}
+                            height={456}
+                        />
+                    </ScreenContainer>
                 </TwoPanel>
                 <TwoPanel inverse>
                     <div>
@@ -178,9 +204,14 @@ export default function Home() {
                         <p>When you have obtained your data, it is up to you what to do with it. Either you let the data as-is, or you remove and modify some of it.</p>
                         <p>Aeon includes the auto-emailer, which can automatically generate emails that legally compel a particular source to modify or delete data.</p>
                     </div>
-                    <div>
-                        <h1>Image!</h1>
-                    </div>
+                    <ScreenContainer inverse>
+                        <Image
+                            className="screen"
+                            src="/data.png"
+                            width={556}
+                            height={456}
+                        />
+                    </ScreenContainer>
                 </TwoPanel>
             </Container>
         </>
