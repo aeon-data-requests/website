@@ -31,6 +31,8 @@ const Right = styled.div`
     a, button {
         display: inline-block;
         height: 50px;
+        line-height: 50px;
+        padding: 0;
         margin-left: 25px;
         text-decoration: none;
         color: black;
