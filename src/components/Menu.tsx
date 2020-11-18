@@ -31,7 +31,6 @@ const Right = styled.div`
     a, button {
         display: inline-block;
         height: 50px;
-        line-height: 50px;
         margin-left: 25px;
         text-decoration: none;
         color: black;
@@ -77,6 +76,8 @@ const Overlay = styled(animated.div)`
 
     a, button {
         font-family: inherit;
+        border: 0;
+        margin: 0;
         border-bottom: 1px solid #eee;
         background-color: rgba(240, 240, 240, 0.8);
         padding: 32px;

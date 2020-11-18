@@ -37,6 +37,10 @@ export const TwoPanel = styled.div<{ inverse?: boolean, alignLeft?: boolean }>`
     @media(max-width: 800px) {
         flex-direction: column-reverse;
 
+        & > * {
+            flex: 1;
+        }
+
         & > :last-child {
             align-self: flex-start;
             text-align: left;

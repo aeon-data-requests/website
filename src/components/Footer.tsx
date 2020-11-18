@@ -5,6 +5,7 @@ import Container, { TwoPanel } from './Container';
 const Wrapper = styled.div`
     background-color: #eee;
     font-size: 14px;
+    padding-bottom: 32px;
 
     ${TwoPanel} {
         margin-bottom: 0;
