@@ -134,6 +134,11 @@ const ScreenContainer = styled.div<{ inverse?: boolean }>`
     }
 `;
 
+const OrganisationCTA = styled(Container)`
+    text-align: center;
+    max-width: 600px;
+`;
+
 export default function Home() {
     return (
         <>
@@ -213,6 +218,11 @@ export default function Home() {
                         />
                     </ScreenContainer>
                 </TwoPanel>
+                <OrganisationCTA>
+                    <h3>Are you an organisation facilitating data requests?</h3>
+                    <p>Aeon integrates with standardised formatting for data rights, in an initiative called the Open Data Rights API. Find details in the provided whitepaper:</p><br />
+                    <Button href="https://whitepaper.open-data-rights.org/" target="_blank">Open Data Rights Whitepaper</Button>
+                </OrganisationCTA>
             </Container>
         </>
     );
