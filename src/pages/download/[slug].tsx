@@ -39,7 +39,8 @@ export async function getStaticProps() {
         return {
             props: {
                 hasData: false
-            }
+            },
+            revalidate: 600,
         };
     }
     
@@ -52,7 +53,8 @@ export async function getStaticProps() {
             rpm: data.assets.find((d: any) => d.name.indexOf('.rpm') !== -1).browser_download_url,
             version: data.name,
             created_at: data.created_at,
-        }
+        },
+        revalidate: 600,
     };
 }
 
